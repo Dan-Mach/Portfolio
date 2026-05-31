@@ -6,7 +6,7 @@ export default function Hero() {
       </div>
         <h1 className="hero-headline">Systems, code, and the craft.</h1>
       <p className="hero-bio">
-        Computer Scienctist with hands-on experience building 
+        Computer Scientist with hands-on experience building 
         full-stack platforms and low-level systems. I work across the stack — from 
         Django backends and React frontends to Rust systems programming and machine learning.
       </p>
