@@ -1,20 +1,26 @@
+import "./components/index.css";
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
-import Skills from './components/Skills';
+import BackgroundWatermarks from './components/BackgroundWatermarks';
 import SelectedWork from './components/SelectedWork';
 import Experience from './components/Experience';
 import Contact from './components/Contact';
+import Skills from './components/Skills';
 
 export default function App() {
   return (
-    <div className="portfolio-root">
+    <div className="relative min-h-screen flex flex-col bg-background text-foreground transition-colors duration-300">
+      {/* Decorative letter watermarks layer */}
+      <BackgroundWatermarks />
+      
+      {/* Global components */}
       <Navbar />
-      <main className="portfolio-container">
+      <main className="relative z-10 max-w-[1100px] w-full mx-auto px-8 pt-32 pb-16 flex flex-col gap-32">
         <Hero />
-        <Skills />
         <SelectedWork />
         <Experience />
         <Contact />
+        <Skills />
       </main>
     </div>
   );

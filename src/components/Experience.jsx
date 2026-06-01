@@ -1,4 +1,4 @@
-// src/components/Experience.jsx
+import { motion } from "motion/react";
 
 export default function Experience() {
   const timeline = [
@@ -18,17 +18,33 @@ export default function Experience() {
 
   return (
     <section className="timeline-section">
-      <h2 className="section-title">Experience</h2>
+      <motion.h2
+        className="section-title"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+      >
+        Experience
+      </motion.h2>
       <div className="timeline-container">
         {timeline.map((item, index) => (
-          <div key={index} className="timeline-item">
+          <motion.div
+            key={index}
+            className="timeline-item"
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: index * 0.2 }}
+            whileHover={{ scale: 1.02 }}
+          >
             <div className="timeline-date">{item.period}</div>
             <div className="timeline-content">
               <h3>{item.role}</h3>
               <h4>{item.company}</h4>
               <p>{item.details}</p>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
     </section>

@@ -1,3 +1,5 @@
+import { motion } from "motion/react";
+
 export default function SelectedWork() {
   const projects = [
     {
@@ -22,21 +24,58 @@ export default function SelectedWork() {
 
   return (
     <section id="work" className="work-section">
-      <h2 className="section-title">Selected work</h2>
+      <motion.h2
+        className="section-title"
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+      >
+        Selected work
+      </motion.h2>
+
+      {/* FIXED IMAGE BLOCK: Added dark-friendly blend modes */}
+      <motion.div
+        className="w-full overflow-hidden rounded-12mb-8 border border-border/40 bg-background"
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8 }}
+      >
+        
+      </motion.div>
+
       <div className="project-list">
-        {projects.map((project) => (
-          <div key={project.id} className="project-card">
+        {projects.map((project, index) => (
+          <motion.div
+            key={project.id}
+            className="project-card"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: index * 0.15 }}
+            whileHover={{ scale: 1.02, transition: { duration: 0.2 } }}
+          >
             <div className="project-meta">
               <span className="project-id">{project.id}</span>
-              <h3 className="project-title">{project.title}</h3>
+              <h3 className="project-title text-foreground">{project.title}</h3>
             </div>
             <p className="project-description">{project.description}</p>
             <div className="project-tags">
               {project.tags.map((tag, i) => (
-                <span key={i} className="tag">{tag}</span>
+                <motion.span
+                  key={i}
+                  className="tag"
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.3, delay: index * 0.15 + i * 0.05 }}
+                >
+                  {tag}
+                </motion.span>
               ))}
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
     </section>
