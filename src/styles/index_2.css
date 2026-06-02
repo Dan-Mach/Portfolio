@@ -1,0 +1,15 @@
+/* src/styles/index_2.css */
+@import './fonts.css';
+@import './tailwind.css';
+@import './theme.css';
+
+@utility hero-grid-mesh {
+  background-image: linear-gradient(to right, #141414 1px, transparent 1px),
+                    linear-gradient(to bottom, #141414 1px, transparent 1px);
+  background-size: 50px 50px;
+}
+
+@utility stroke-header {
+  -webkit-text-stroke: 1px #3f3f46;
+  color: transparent;
+}

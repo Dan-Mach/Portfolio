@@ -1,26 +1,24 @@
-import "./components/index.css";
+// src/App.jsx
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
-import BackgroundWatermarks from './components/BackgroundWatermarks';
 import SelectedWork from './components/SelectedWork';
 import Experience from './components/Experience';
 import Contact from './components/Contact';
-import Skills from './components/Skills';
 
 export default function App() {
   return (
-    <div className="relative min-h-screen flex flex-col bg-background text-foreground transition-colors duration-300">
-      {/* Decorative letter watermarks layer */}
-      <BackgroundWatermarks />
-      
-      {/* Global components */}
+    <div className="dark min-h-screen w-full bg-background text-foreground font-sans relative antialiased flex flex-col">
+      {/* BackgroundWatermarks removed from here */}
       <Navbar />
-      <main className="relative z-10 max-w-[1100px] w-full mx-auto px-8 pt-32 pb-16 flex flex-col gap-32">
+      
+      <main className="w-full flex flex-col z-10">
         <Hero />
-        <Skills />
-        <SelectedWork />
-        <Experience />
-        <Contact />
+        
+        <div className="w-full max-w-7xl mx-auto px-4 md:px-8 xl:px-12 flex flex-col gap-24 md:gap-36 pb-24">
+          <SelectedWork />
+          <Experience />
+          <Contact />
+        </div>
       </main>
     </div>
   );
