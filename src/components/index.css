@@ -364,7 +364,7 @@ section {
 
 .watermark-row {
   position: absolute;
-  top: 7%; /* Adjust this percentage to move the whole row up or down */
+  top: 10%; /* Adjust this percentage to move the whole row up or down */
   left: 0;
   width: 100%;
   display: flex;
