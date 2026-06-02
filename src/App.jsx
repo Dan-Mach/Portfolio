@@ -17,8 +17,8 @@ export default function App() {
       <Navbar />
       <main className="relative z-10 max-w-[1100px] w-full mx-auto px-8 pt-32 pb-16 flex flex-col gap-32">
         <Hero />
-        <SelectedWork />
         <Skills />
+        <SelectedWork />
         <Experience />
         <Contact />
       </main>
