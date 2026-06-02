@@ -10,7 +10,8 @@ export default function SelectedWork() {
       description: "A fully functional chess engine built from scratch in Rust. Implements move generation, board evaluation, and a search algorithm — a deep dive into low-level systems programming and game theory.",
       tech: ["Rust", "Systems", "Algorithms"],
       image: null,
-      logo: null
+      logo: null,
+      link: null
     },
     {
       id: "02",
@@ -19,7 +20,8 @@ export default function SelectedWork() {
       description: "Full-stack medical facility platform managing medicine dispensing, patient records, and employee workflows. Built with Django and role-based access control across a decentralised server architecture.",
       tech: ["Django", "Python", "RBAC"],
       image: null,
-      logo: null
+      logo: null,
+      link: null
     },
     {
       id: "03",
@@ -28,7 +30,8 @@ export default function SelectedWork() {
       description: "A custom convolutional scheduler logic system designed for systems optimization, task sequencing, and automated operational execution matrices.",
       tech: ["TensorFlow", "Python", "Scheduling"],
       image: null,
-      logo: null
+      logo: null,
+      link: null
     },
     {
       id: "04",
@@ -36,8 +39,10 @@ export default function SelectedWork() {
       title: "HARDWARE SYNC",
       description: "A web-based competition platform connecting videographers with brand sponsorships. Handles high-resolution video submissions, automated scoring, and optimized low-latency media uploads.",
       tech: ["Django", "React", "Performance"],
-      image: "/image_3a2d71.png", // Large textured cover asset map
-      logo: "/image_3a1e84.png"    // Inline title branding graphic map
+      // FIXED PATHS: Omit "/public" prefix so Vite reads directly from root asset stack
+      image: "public/ohhhcontest.png", 
+      logo: "public/logo.png",
+      link: "https://www.ohhhcontest.com/"
     }
   ];
 
@@ -46,7 +51,7 @@ export default function SelectedWork() {
       {/* Grid Meta Header Group */}
       <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-4 mb-12">
         <div>
-          <span className="font-mono text-[10px] tracking-widest God text-muted-foreground uppercase block">
+          <span className="font-mono text-[10px] tracking-widest text-muted-foreground uppercase block">
             01 -- ASSIGNED PROJECTS
           </span>
           <h2 className="text-3xl font-bold font-sans uppercase tracking-tight mt-2">
@@ -63,7 +68,7 @@ export default function SelectedWork() {
         {projects.map((project, index) => (
           <motion.div
             key={project.id}
-            className="bg-background p-8 flex flex-col justify-between group min-h-[480px] transition-colors duration-300 hover:bg-card/40"
+            className="bg-background p-8 flex flex-col justify-between group min-h-[480px] transition-colors duration-300 hover:bg-card/40 relative"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -80,7 +85,7 @@ export default function SelectedWork() {
                   <img 
                     src={project.image} 
                     alt={`${project.title} Interface Layer`} 
-                    className="w-full h-full object-cover filter grayscale luminosity opacity-80 group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-500 ease-in-out"
+                    className="w-full h-full object-cover filter grayscale opacity-80 group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-500 ease-in-out"
                   />
                 ) : (
                   <div className="w-full h-full flex items-center justify-center font-mono text-[10px] text-muted-foreground/40 uppercase tracking-widest">
@@ -115,8 +120,8 @@ export default function SelectedWork() {
               </p>
             </div>
 
-            {/* Bottom Status Block */}
-            <div className="mt-8 pt-4 border-t border-border/40 flex justify-between items-center font-mono text-[10px]">
+            {/* Bottom Status Block with dynamic navigation link handling */}
+            <div className="mt-8 pt-4 border-t border-border/40 flex justify-between items-center font-mono text-[10px] z-20">
               <div className="flex gap-2 text-muted-foreground/60">
                 {project.tech.map((t, idx) => (
                   <span key={idx} className="uppercase">
@@ -124,9 +129,25 @@ export default function SelectedWork() {
                   </span>
                 ))}
               </div>
-              <span className="text-muted-foreground group-hover:text-foreground group-hover:translate-x-1 transition-all">
-                →
-              </span>
+
+              {project.link ? (
+                <a 
+                  href={project.link} 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="text-accent group-hover:text-foreground flex items-center gap-1 transition-all hover:underline"
+                  title={`Launch deployment for ${project.title}`}
+                >
+                  <span>VISIT</span>
+                  <span className="transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-200">
+                    ↗
+                  </span>
+                </a>
+              ) : (
+                <span className="text-muted-foreground group-hover:text-foreground group-hover:translate-x-1 transition-all">
+                  →
+                </span>
+              )}
             </div>
           </motion.div>
         ))}
