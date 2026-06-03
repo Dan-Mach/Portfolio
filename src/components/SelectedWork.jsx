@@ -5,45 +5,45 @@ export default function SelectedWork() {
   const projects = [
     {
       id: "01",
-      tag: "DMR CORE / RUST",
-      title: "OMNI-CHANNEL CORE",
-      description: "A fully functional chess engine built from scratch in Rust. Implements move generation, board evaluation, and a search algorithm — a deep dive into low-level systems programming and game theory.",
-      tech: ["Rust", "Systems", "Algorithms"],
-      image: null,
-      logo: null,
+      tag: "VECTORS / ML",
+      title: "NEURAL ARCH",
+      description: "A custom convolutional scheduler logic system designed for systems optimization, task sequencing, and automated operational execution matrices.",
+      tech: ["TensorFlow", "Python", "Scheduling"],
+      image: "public/neural_arch.png",
+      logo:"public/neural_arch_logo.png",
       link: null
     },
     {
       id: "02",
+      tag: "LOW-LEVEL API / WEB",
+      title: "OHHH CONTEST",
+      description: "A web-based competition platform connecting videographers with brand sponsorships. Handles high-resolution video submissions, automated scoring, and optimized low-latency media uploads.",
+      tech: ["Django", "React", "Performance"],
+      image: "public/ohhhcontest.png", 
+      logo: "public/logo.png",
+      link: "https://www.ohhhcontest.com/"
+    },
+    {
+      id: "03",
+      tag: "DMR CORE  RUST",
+      title: "RUSTY CHESS ENGINE",
+      description: "A fully functional chess engine built from scratch in Rust. Implements move generation, board evaluation, and a search algorithm — a deep dive into low-level systems programming and game theory.",
+      tech: ["Rust", "Systems", "Algorithms"],
+      image: "public/chess.png",
+      logo: null,
+      link: null
+    },
+    {
+      id: "04",
       tag: "FULL-STACK / INFRA",
-      title: "DMR CLOUD CORE",
+      title: "RISING HOPE",
       description: "Full-stack medical facility platform managing medicine dispensing, patient records, and employee workflows. Built with Django and role-based access control across a decentralised server architecture.",
       tech: ["Django", "Python", "RBAC"],
       image: null,
       logo: null,
       link: null
     },
-    {
-      id: "03",
-      tag: "VECTORS / ML",
-      title: "NEURAL ARCH",
-      description: "A custom convolutional scheduler logic system designed for systems optimization, task sequencing, and automated operational execution matrices.",
-      tech: ["TensorFlow", "Python", "Scheduling"],
-      image: null,
-      logo: null,
-      link: null
-    },
-    {
-      id: "04",
-      tag: "LOW-LEVEL API / WEB",
-      title: "HARDWARE SYNC",
-      description: "A web-based competition platform connecting videographers with brand sponsorships. Handles high-resolution video submissions, automated scoring, and optimized low-latency media uploads.",
-      tech: ["Django", "React", "Performance"],
-      // FIXED PATHS: Omit "/public" prefix so Vite reads directly from root asset stack
-      image: "public/ohhhcontest.png", 
-      logo: "public/logo.png",
-      link: "https://www.ohhhcontest.com/"
-    }
+    
   ];
 
   return (
