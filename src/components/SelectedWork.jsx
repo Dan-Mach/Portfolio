@@ -9,8 +9,8 @@ export default function SelectedWork() {
       title: "NEURAL ARCH",
       description: "A custom convolutional scheduler logic system designed for systems optimization, task sequencing, and automated operational execution matrices.",
       tech: ["TensorFlow", "Python", "Scheduling"],
-      image: "public/neural_arch.png",
-      logo:"public/neural_arch_logo.png",
+      image: "/neural_arch.png",
+      logo:"/neural_arch_logo.png",
       link: null
     },
     {
@@ -19,8 +19,8 @@ export default function SelectedWork() {
       title: "OHHH CONTEST",
       description: "A web-based competition platform connecting videographers with brand sponsorships. Handles high-resolution video submissions, automated scoring, and optimized low-latency media uploads.",
       tech: ["Django", "React", "Performance"],
-      image: "public/ohhhcontest.png", 
-      logo: "public/logo.png",
+      image: "/ohhhcontest.png", 
+      logo: "/logo.png",
       link: "https://www.ohhhcontest.com/"
     },
     {
@@ -29,7 +29,7 @@ export default function SelectedWork() {
       title: "RUSTY CHESS ENGINE",
       description: "A fully functional chess engine built from scratch in Rust. Implements move generation, board evaluation, and a search algorithm — a deep dive into low-level systems programming and game theory.",
       tech: ["Rust", "Systems", "Algorithms"],
-      image: "public/chess.png",
+      image: "/chess.png",
       logo: null,
       link: null
     },
