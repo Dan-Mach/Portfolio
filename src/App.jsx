@@ -4,6 +4,7 @@ import Hero from './components/Hero';
 import SelectedWork from './components/SelectedWork';
 import Experience from './components/Experience';
 import Contact from './components/Contact';
+import { Analytics } from '@vercel/analytics/react';
 
 export default function App() {
   return (
@@ -20,6 +21,7 @@ export default function App() {
           <Contact />
         </div>
       </main>
+      <Analytics />
     </div>
   );
 }

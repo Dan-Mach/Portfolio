@@ -4,12 +4,11 @@ import { motion } from "motion/react";
 export default function Experience() {
   // Merged skills dataset formatted for the technical profile block
   const skillMatrix = [
-    { category: "LANGUAGES", items: "Python, Rust, JavaScript, C" },
+    { category: "LANGUAGES", items: "Python, Rust, JavaScript, C, JavaScript," },
     { category: "FRAMEWORKS", items: "Django, React, TensorFlow, PyTorch" },
     { category: "CONCEPTS", items: "System Design, Data Structures, Algorithms, Distributed Systems" }
   ];
 
-  // Quadrant data mapping tracking numbers to real engineering achievements
   const quadrants = [
     {
       id: "01",
