@@ -22,7 +22,7 @@ export default function Navbar() {
           alt="DMR" 
           className="w-6 h-6 object-cover grayscale border border-border" 
         />
-        <span className="font-bold">DMR.</span>
+        <span className="font-bold">DMR</span>
       </motion.div>
 
       {/* Centered Navigation Matrix */}
@@ -33,9 +33,9 @@ export default function Navbar() {
       </div>
 
       {/* Action System Identifier */}
-      <div className="hidden sm:block">
-        <span className="font-mono text-[10px] tracking-widest text-muted-foreground border border-border px-3 py-1.5 uppercase bg-card/40">
-          SYS // INLINE
+      <div className="hidden lg:block">
+        <span className="font-mono text-[12px] tracking-widest text-muted-foreground border border-border px-3 py-1.5 uppercase bg-card/40">
+          dimar
         </span>
       </div>
     </motion.nav>

@@ -56,8 +56,8 @@ export default function Contact() {
         </div>
 
         {/* Legal Engineering Stamp */}
-        <div className="font-mono text-[9px] text-muted-foreground/40 tracking-wider uppercase text-left sm:text-right w-full sm:w-auto">
-          <span>© 2026 Daniel Mach Reech. All rights reserved.</span>
+        <div className="font-mono text-[14px] text-muted-foreground/40 tracking-wider uppercase text-left sm:text-right w-full sm:w-auto">
+          <span>© 2026 dimar. All rights reserved.</span>
         </div>
       </div>
     </section>
