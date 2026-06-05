@@ -26,7 +26,7 @@ export default function Navbar() {
       </motion.div>
 
       {/* Centered Navigation Matrix */}
-      <div className="flex items-center gap-8 font-mono text-xs">
+      <div className="flex items-center gap-8 font-mono text-s">
         <a href="#work" className="text-muted-foreground hover:text-foreground transition-colors">Work</a>
         <a href="#about" className="text-muted-foreground hover:text-foreground transition-colors">About</a>
         <a href="#contact" className="text-muted-foreground hover:text-foreground transition-colors">Contact</a>
