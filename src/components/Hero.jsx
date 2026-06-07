@@ -67,7 +67,7 @@ export default function Hero() {
 
         {/* Right Side: High-Impact Hero Artwork Container displaying ohhhcontest */}
         <motion.div 
-          className="lg:col-span-5 w-full aspect-[4/5] lg:h-[85vh] bg-neutral-950 border border-border relative overflow-hidden group"
+          className="lg:col-span-5 w-full aspect-[4/5] lg:h-[75vh] bg-neutral-950 border border-border relative overflow-hidden group"
           initial={{ opacity: 0, scale: 0.98 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
