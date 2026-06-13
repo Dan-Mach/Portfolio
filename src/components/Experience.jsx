@@ -74,7 +74,7 @@ export default function Experience() {
           {quadrants.map((quad, index) => (
             <motion.div
               key={quad.id}
-              className="p-8 border-r border-b border-border min-h-[240px] flex flex-col justify-between relative group hover:bg-card/20 transition-colors duration-300"
+              className="p-8 border-r border-b border-border min-h-[310px] flex flex-col justify-between relative group hover:bg-card/20 transition-colors duration-300"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}

@@ -1,8 +1,8 @@
+// src/components/Projects.jsx
 import { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 
 export default function Projects() {
-  // Production engine project logs matrix
   const projectMatrix = [
     {
       id: "01",
@@ -38,20 +38,19 @@ export default function Projects() {
 
   return (
     <section id="projects" className="pt-24 pb-16 border-t border-border px-4 md:px-12">
-      {/* Structural Container - Aligning width with Hero.jsx */}
       <div className="w-full max-w-7xl mx-auto">
         
-        {/* Section Header Matrix */}
+        {/* Synchronized Section Header Matrix */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-4 mb-12">
           <div>
-            <span className="font-mono text-[10px] tracking-widest text-muted-foreground uppercase block">
-              01 -- ASSIGNED MODULES
+            <span className="font-mono text-[10px] tracking-widest text-accent uppercase font-bold block">
+              01 -- PROJECTS & REPOSITORIES
             </span>
             <h2 className="text-3xl font-bold font-sans uppercase tracking-tight mt-2 text-foreground">
               Projects
             </h2>
           </div>
-          <div className="font-mono text-[10px] text-accent tracking-widest uppercase font-bold">
+          <div className="font-mono text-[10px] text-muted-foreground/40 tracking-widest uppercase">
             EXEC // ACTIVE_MATRIX
           </div>
         </div>
@@ -59,7 +58,7 @@ export default function Projects() {
         {/* Main Split Interface Matrix */}
         <div className="w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-start relative z-10">
           
-          {/* Left Side: Interactive Project Manifest Shell Selector */}
+          {/* Left Side Selector */}
           <div className="lg:col-span-6 flex flex-col font-mono border-t border-border/60 w-full">
             {projectMatrix.map((project, idx) => (
               <button
@@ -85,9 +84,8 @@ export default function Projects() {
             ))}
           </div>
 
-          {/* Right Side: High-Contrast Dynamic Project Display Screen */}
+          {/* Right Side Terminal Panel */}
           <div className="lg:col-span-6 w-full aspect-[16/10] bg-neutral-950 border border-border relative overflow-hidden flex flex-col justify-between p-8 select-none">
-            {/* Geometric Blueprint Framing Lines inside the box */}
             <div className="absolute inset-4 border border-border/30 pointer-events-none">
               <div className="absolute top-0 left-4 w-8 h-[1px] bg-muted-foreground/30"></div>
               <div className="absolute top-4 left-0 w-[1px] h-8 bg-muted-foreground/30"></div>
@@ -95,10 +93,7 @@ export default function Projects() {
               <div className="absolute bottom-4 right-0 w-[1px] h-8 bg-muted-foreground/30"></div>
             </div>
 
-            {/* Project Screen Output Matrix */}
             <div className="w-full h-full flex flex-col justify-between relative z-10 py-2">
-              
-              {/* Upper Section: Core Module Type Tag */}
               <div className="flex justify-between items-start border-b border-dashed border-border/40 pb-4">
                 <span className="font-mono text-[9px] tracking-wider text-accent border border-accent/30 bg-accent/5 px-2.5 py-1 uppercase font-medium">
                   {projectMatrix[activeIdx].tag}
@@ -108,7 +103,6 @@ export default function Projects() {
                 </span>
               </div>
 
-              {/* Middle Section: Animated Typographic Render */}
               <div className="my-auto py-4">
                 <AnimatePresence mode="wait">
                   <motion.div
@@ -129,7 +123,6 @@ export default function Projects() {
                 </AnimatePresence>
               </div>
 
-              {/* Bottom Section: Dynamic Hardware Environment Stack Logs */}
               <div className="border-t border-dashed border-border/40 pt-4 flex flex-col gap-1.5 font-mono text-[9px] text-muted-foreground/60 uppercase tracking-widest">
                 <div className="flex justify-between">
                   <span>RUNTIME_ENV</span>
@@ -140,12 +133,10 @@ export default function Projects() {
                   <span className="text-emerald-500/80">// COMPILED //</span>
                 </div>
               </div>
-
             </div>
           </div>
 
         </div>
-
       </div>
     </section>
   );

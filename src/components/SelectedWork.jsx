@@ -51,8 +51,8 @@ export default function SelectedWork() {
       {/* Grid Meta Header Group */}
       <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-4 mb-12">
         <div>
-          <span className="font-mono text-[10px] tracking-widest text-muted-foreground uppercase block">
-            01 -- ASSIGNED PROJECTS
+          <span className="font-mono text-[10px] tracking-widest text-accent uppercase font-bold block">
+            03 -- WORK & PRODUCTION SHELLS
           </span>
           <h2 className="text-3xl font-bold font-sans uppercase tracking-tight mt-2">
             Production Shells
