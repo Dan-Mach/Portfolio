@@ -1,10 +1,9 @@
-// src/components/Experience.jsx
 import { motion } from "motion/react";
 
 export default function Experience() {
   // Merged skills dataset formatted for the technical profile block
   const skillMatrix = [
-    { category: "LANGUAGES", items: "Python, Rust, JavaScript, C, JavaScript," },
+    { category: "LANGUAGES", items: "Python, Rust, JavaScript, C" },
     { category: "FRAMEWORKS", items: "Django, React, TensorFlow, PyTorch" },
     { category: "CONCEPTS", items: "System Design, Data Structures, Algorithms, Distributed Systems" }
   ];
@@ -37,8 +36,9 @@ export default function Experience() {
   ];
 
   return (
-    <section className="pt-20 border-t border-border">
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
+    <section id="experience" className="pt-24 pb-16 border-t border-border px-4 md:px-12">
+      {/* Structural Containment Grid - Aligned perfectly with Hero & Projects wrapper */}
+      <div className="w-full max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12">
         
         {/* Left Column: Industrial Headers & Skills Manifest */}
         <div className="lg:col-span-4 flex flex-col justify-between gap-12">
@@ -46,7 +46,7 @@ export default function Experience() {
             <span className="font-mono text-[10px] tracking-widest text-accent uppercase font-bold">
               02 -- TECHNICAL MATRIX
             </span>
-            <h2 className="text-3xl font-bold font-sans uppercase tracking-tight mt-2 mb-4 leading-none">
+            <h2 className="text-3xl font-bold font-sans uppercase tracking-tight mt-2 mb-4 leading-none text-foreground">
               The<br />Architecture<br />Of Code.
             </h2>
             <p className="text-sm text-muted-foreground font-sans leading-relaxed">
@@ -70,7 +70,7 @@ export default function Experience() {
         </div>
 
         {/* Right Column: 2x2 Geometric Grid Quadrants */}
-        <div className="lg:col-span-8 grid grid-cols-1 md:grid-cols-2 border-t border-l border-border">
+        <div className="lg:col-span-8 grid grid-cols-1 md:grid-cols-2 border-t border-l border-border bg-neutral-950/20">
           {quadrants.map((quad, index) => (
             <motion.div
               key={quad.id}

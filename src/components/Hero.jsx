@@ -1,4 +1,3 @@
-// src/components/Hero.jsx
 import { motion } from "motion/react";
 
 export default function Hero() {
@@ -25,8 +24,8 @@ export default function Hero() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <span className="font-mono text-[10px] tracking-widest text-accent uppercase font-bold">
-              SYSTEMS ARCHITECT & DEV 
+            <span className="font-mono text-[15px] tracking-widest text-accent uppercase font-bold">
+              SYSTEMS ARCHITECT & DEVELOPER 
             </span>
           </motion.div>
           
@@ -65,14 +64,39 @@ export default function Hero() {
           </motion.div>
         </div>
 
-        {/* Right Side: High-Impact Hero Artwork Container displaying ohhhcontest */}
+        {/* Right Side: Bold & High-Contrast Staggered Wordmark Container */}
         <motion.div 
-          className="lg:col-span-5 w-full aspect-[4/5] lg:h-[75vh] bg-neutral-950 border border-border relative overflow-hidden group"
+          className="lg:col-span-5 w-full aspect-[4/5] lg:h-[72vh] bg-neutral-950 border border-border relative overflow-hidden group flex flex-col items-center justify-center p-6 sm:p-12 select-none"
           initial={{ opacity: 0, scale: 0.98 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
         >
-          
+          {/* Geometric Blueprint Framing Lines inside the box */}
+          <div className="absolute inset-4 border border-border/30 pointer-events-none">
+            <div className="absolute top-0 left-4 w-8 h-[1px] bg-muted-foreground/30"></div>
+            <div className="absolute top-4 left-0 w-[1px] h-8 bg-muted-foreground/30"></div>
+            <div className="absolute bottom-0 right-4 w-8 h-[1px] bg-muted-foreground/30"></div>
+            <div className="absolute bottom-4 right-0 w-[1px] h-8 bg-muted-foreground/30"></div>
+          </div>
+
+          {/* Expanded, High-Luminance Staggered Wordmark Matrix */}
+          <div className="flex flex-col gap-6 sm:gap-10 font-mono font-bold tracking-tight text-4xl sm:text-5xl md:text-6xl relative z-10 lowercase opacity-85 group-hover:opacity-100 transition-opacity duration-500 w-full">
+            <span className="self-start text-foreground/40 text-left pl-2">
+              dimar
+            </span>
+            <span className="self-center text-foreground border-y border-dashed border-border py-4 px-8 bg-card/60 tracking-normal w-full text-center shadow-2xl">
+              dimar
+            </span>
+            <span className="self-end text-foreground/40 text-right pr-2">
+              dimar
+            </span>
+          </div>
+
+          {/* Technical Hardware Data Details */}
+          <div className="absolute bottom-6 left-6 right-6 flex justify-between font-mono text-[8px] text-muted-foreground/40 uppercase tracking-widest">
+            <span>SYS_REF // MAT_01</span>
+            <span>OP_STREAM // STABLE</span>
+          </div>
         </motion.div>
 
       </div>
