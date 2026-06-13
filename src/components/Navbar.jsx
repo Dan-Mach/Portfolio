@@ -28,11 +28,6 @@ export default function Navbar() {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.2 }}
         >
-          <img 
-            src="/dmr.jpeg" 
-            alt="DMR" 
-            className="w-6 h-6 object-cover grayscale border border-border" 
-          />
           <span className="font-bold">DMR</span>
         </motion.div>
 
@@ -60,22 +55,25 @@ export default function Navbar() {
           {/* Hamburger Menu Toggle Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="flex flex-col justify-center items-center w-8 h-8 md:hidden border border-border bg-card/20 rounded-none gap-1.5 cursor-pointer focus:outline-none"
+            className="flex flex-col justify-center items-center w-8 h-8 md:hidden border border-border bg-card/20 rounded-none gap-1 cursor-pointer focus:outline-none"
             aria-label="Toggle structural menu pipeline"
           >
+            {/* Top Bar: Rotates and shifts exactly 2px down to meet the bottom bar cleanly */}
             <span 
-              className={`h-[1px] w-4 bg-foreground transition-all duration-300 transform ${
-                isOpen ? "rotate-45 translate-y-[3.5px]" : ""
+              className={`h-[1px] w-4 bg-foreground transition-all duration-300 transform origin-center ${
+                isOpen ? "rotate-45 translate-y-[2px]" : ""
               }`}
             />
+            {/* Middle Bar: Collapses neatly to zero width so it cannot push into the outer segments */}
             <span 
-              className={`h-[1px] w-4 bg-foreground transition-all duration-300 ${
-                isOpen ? "opacity-0" : "opacity-100"
+              className={`h-[1px] bg-foreground transition-all duration-300 ${
+                isOpen ? "w-0 opacity-0" : "w-4 opacity-100"
               }`}
             />
+            {/* Bottom Bar: Rotates and shifts exactly 2px up to meet the top bar tip-to-tip */}
             <span 
-              className={`h-[1px] w-4 bg-foreground transition-all duration-300 transform ${
-                isOpen ? "-rotate-45 -translate-y-[3.5px]" : ""
+              className={`h-[1px] w-4 bg-foreground transition-all duration-300 transform origin-center ${
+                isOpen ? "-rotate-45 -translate-y-[2px]" : ""
               }`}
             />
           </button>
@@ -86,7 +84,7 @@ export default function Navbar() {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            className="fixed inset-0 bg-[#0a0a0a]/95 z-40 flex flex-col justify-center items-end md:hidden px-12 sm:px-24"
+            className="fixed inset-0 bg-[#0a0a0a]/95 z-40 flex flex-col justify-between items-end md:hidden px-12 sm:px-24 pt-32 pb-12"
             initial={{ opacity: 0, x: "100%" }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: "100%" }}
@@ -95,8 +93,8 @@ export default function Navbar() {
             {/* Overlay Geometric Mesh Background Alignment */}
             <div className="absolute inset-0 opacity-10 pointer-events-none bg-[radial-gradient(#1f1f1f_1px,transparent_1px)] [background-size:16px_16px]"></div>
             
-            {/* Right-aligned text content layout */}
-            <div className="flex flex-col items-end gap-8 font-mono text-xl tracking-widest relative z-10 text-right">
+            {/* Top/Center: Right-aligned links layout */}
+            <div className="flex flex-col items-end gap-8 font-mono text-xl tracking-widest relative z-10 text-right w-full mt-auto mb-auto">
               {navLinks.map((link, idx) => (
                 <motion.a
                   key={link.name}
@@ -111,6 +109,16 @@ export default function Navbar() {
                 </motion.a>
               ))}
             </div>
+
+            {/* Bottom Right: Powered By Label in Small Caps */}
+            <motion.div
+              className="relative z-10 font-mono text-[10px] tracking-widest text-muted-foreground/50 select-none lowercase [font-variant:small-caps]"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.4 }}
+            >
+              powered by dimar
+            </motion.div>
           </motion.div>
         )}
       </AnimatePresence>
