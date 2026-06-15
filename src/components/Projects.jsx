@@ -102,12 +102,6 @@ export default function Projects() {
                   SYS_ID // {projectMatrix[activeIdx].id}
                 </span>
               </div>
-
-              {/* VERTICAL SCROLL ENGINE CONTAINER:
-                  - max-h-[170px] restricts vertical growth on phone viewports to guarantee scroll availability
-                  - overflow-y-scroll forces the browser layout engine to render a vertical track
-                  - pr-4 prevents text from clipping under the scroll track on the right edge
-              */}
               <div className="my-auto py-4 max-h-[170px] lg:max-h-none overflow-x-hidden overflow-y-scroll pr-4 custom-vertical-scrollbar">
                 <AnimatePresence mode="wait">
                   <motion.div
