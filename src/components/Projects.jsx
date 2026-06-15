@@ -22,7 +22,7 @@ export default function Projects() {
       id: "03",
       title: "neural arch",
       tag: "VECTORS / ML",
-      desc: "A custom convolutional scheduler logic system optimized ffffffffffffffffffffffffffffffffffffffffffffffffffff fffffffffffffffffffffffffffffffffffffffffffffffffffffff for advanced systems sequencing and task-driven execution matrices.",
+      desc: "A custom convolutional scheduler logic system optimized for advanced systems sequencing and task-driven execution matrices.",
       meta: "STACK // TENSORFLOW"
     },
     {
