@@ -61,7 +61,7 @@ export default function Navbar() {
               </svg>
             </a>
             <a 
-              href="https://linkedin.com" // Update with your actual LinkedIn link if needed
+              href="https://www.linkedin.com/in/daniel-reech" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-foreground transition-colors p-1"
