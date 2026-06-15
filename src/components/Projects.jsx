@@ -22,7 +22,7 @@ export default function Projects() {
       id: "03",
       title: "neural arch",
       tag: "VECTORS / ML",
-      desc: "A custom convolutional scheduler logic system optimized for advanced systems sequencing and task-driven execution matrices.",
+      desc: "A custom convolutional scheduler logic system optimized ffffffffffffffffffffffffffffffffffffffffffffffffffff fffffffffffffffffffffffffffffffffffffffffffffffffffffff for advanced systems sequencing and task-driven execution matrices.",
       meta: "STACK // TENSORFLOW"
     },
     {
@@ -85,7 +85,7 @@ export default function Projects() {
           </div>
 
           {/* Right Side Terminal Panel */}
-          <div className="lg:col-span-6 w-full aspect-[16/10] bg-neutral-950 border border-border relative overflow-hidden flex flex-col justify-between p-8 select-none">
+          <div className="lg:col-span-6 w-full aspect-auto lg:aspect-[16/10] min-h-[340px] bg-neutral-950 border border-border relative overflow-hidden flex flex-col justify-between p-6 sm:p-8 select-none">
             <div className="absolute inset-4 border border-border/30 pointer-events-none">
               <div className="absolute top-0 left-4 w-8 h-[1px] bg-muted-foreground/30"></div>
               <div className="absolute top-4 left-0 w-[1px] h-8 bg-muted-foreground/30"></div>
@@ -103,7 +103,12 @@ export default function Projects() {
                 </span>
               </div>
 
-              <div className="my-auto py-4">
+              {/* VERTICAL SCROLL ENGINE CONTAINER:
+                  - max-h-[170px] restricts vertical growth on phone viewports to guarantee scroll availability
+                  - overflow-y-scroll forces the browser layout engine to render a vertical track
+                  - pr-4 prevents text from clipping under the scroll track on the right edge
+              */}
+              <div className="my-auto py-4 max-h-[170px] lg:max-h-none overflow-x-hidden overflow-y-scroll pr-4 custom-vertical-scrollbar">
                 <AnimatePresence mode="wait">
                   <motion.div
                     key={activeIdx}
