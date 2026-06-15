@@ -21,18 +21,27 @@ export default function Navbar() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
       >
-        {/* Brand Identity */}
-        <motion.div
-          className="flex items-center gap-3 font-mono text-xs tracking-wider uppercase text-foreground relative z-50"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.2 }}
-        >
-          <span className="font-bold">DMR</span>
-        </motion.div>
-
+      <motion.div
+      className="flex items-center gap-4 font-mono text-xs tracking-wider uppercase text-foreground select-none"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ delay: 0.2 }}
+      >
+      <img 
+        src="/dmr.jpeg" 
+        alt="DMR" 
+        className="w-6 h-6 object-cover grayscale border border-border" 
+      />
+      {/* Typographic Inversion Element Wrapper */}
+      <div className="flex items-center font-mono text-xs tracking-wider uppercase text-foreground">
+        <span className="inline-block transform scale-x-[-1] font-bold origin-center mr-[2px]">
+          d
+        </span>
+        <span className="font-bold">mr</span>
+      </div>
+      </motion.div>
         {/* Centered Desktop Navigation Matrix */}
-        <div className="hidden md:flex items-center gap-8 font-mono text-xs">
+        <div className="hidden md:flex items-center gap-8 font-mono text-sm">
           {navLinks.map((link) => (
             <a 
               key={link.name} 
