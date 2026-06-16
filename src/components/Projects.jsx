@@ -51,7 +51,7 @@ export default function Projects() {
             </h2>
           </div>
           <div className="font-mono text-[10px] text-muted-foreground/40 tracking-widest uppercase">
-            EXEC // ACTIVE_MATRIX
+            EXECUTED // ACTIVE_MATRIX
           </div>
         </div>
 
