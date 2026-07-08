@@ -12,7 +12,7 @@ export default function SelectedWork() {
       image: "/neural_arch.png",
       logo:"/neural_arch_logo.png",
       link: null,
-      github: "https://github.com/Dan-Mach/project" // Added GitHub Repo
+      github: "https://github.com/Dan-Mach/Neural" // Added GitHub Repo
     },
     {
       id: "02",
