@@ -2,12 +2,7 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 export default function Hero() {
-  // Animation Pipeline States:
-  // 1 = Centered Clean Circle Logo ("d") -> From Screenshot From 2026-06-15 15-07-38.png
-  // 2 = Circle stays, "i", "m", "a", "r" append next to it -> From Screenshot From 2026-06-15 15-07-45.png
-  // 3 = Pure typography grid with left, center, right alignment offsets -> From Screenshot From 2026-06-15 15-15-43.png
   const [currentStage, setCurrentStage] = useState(1);
-
   const remainingLetters = ["i", "m", "a", "r"];
 
   // Automated Infinite Loop Orchestration Sequence
@@ -155,7 +150,7 @@ export default function Hero() {
                   >
                     {/* Circle Anchor */}
                     <div className="w-18 h-18 sm:w-20 sm:h-20 rounded-full border-[4px] border-foreground flex items-center justify-center bg-[#0a0a0a] shrink-0 mr-2 sm:mr-3">
-                      <span className="font-mono font-bold text-4xl sm:text-5xl leading-none">
+                      <span className="font-mono font-bold text-5xl sm:text-6xl leading-none">
                         d
                       </span>
                     </div>
@@ -179,7 +174,7 @@ export default function Hero() {
               {currentStage === 3 && (
                 <motion.div
                   key="stage-3"
-                  className="flex flex-col gap-8 sm:gap-10 w-full font-mono font-bold text-5xl sm:text-6xl md:text-7xl lowercase relative z-10 tracking-tighter"
+                  className="flex flex-col gap-8 sm:gap-10 w-full font-mono font-bold text-4xl sm:text-5xl md:text-6xl lowercase relative z-10 tracking-tighter"
                   initial="hidden"
                   animate="visible"
                   variants={{
