@@ -23,7 +23,7 @@ export default function SelectedWork() {
       image: "/ohhhcontest.png", 
       logo: "/logo.png",
       link: "https://www.ohhhcontest.com/",
-      github: null // No GitHub link or icon for Ocontest as requested
+      github: null
     },
     {
       id: "03",
@@ -34,7 +34,7 @@ export default function SelectedWork() {
       image: "/chess.png",
       logo: null,
       link: null,
-      github: "https://github.com/Dan-Mach/rusty-chess" // Added GitHub Repo
+      github: "https://github.com/Dan-Mach/rusty-chess" 
     },
     {
       id: "04",
@@ -45,7 +45,7 @@ export default function SelectedWork() {
       image: null,
       logo: null,
       link: null,
-      github: "https://github.com/Dan-Mach/rising-hope" // Added GitHub Repo
+      github: "https://github.com/Dan-Mach/Rising-hope" 
     },
   ];
 
