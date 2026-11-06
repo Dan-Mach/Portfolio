@@ -13,3 +13,25 @@
   -webkit-text-stroke: 1px #3f3f46;
   color: transparent;
 }
+
+@layer utilities {
+  /* Forces rendering of a custom vertical terminal scrollbar lane */
+  .custom-vertical-scrollbar::-webkit-scrollbar {
+    width: 5px !important;              /* Width of the vertical rail on the right side */
+    display: block !important;          /* Prevents webkit engine from collapsing it on mobile */
+  }
+  
+  .custom-vertical-scrollbar::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.03) !important;
+    border-left: 1px dashed rgba(255, 255, 255, 0.1) !important;
+  }
+  
+  .custom-vertical-scrollbar::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.3) !important; /* Visible gray highlight thumb */
+    border-radius: 0px !important;
+  }
+
+  .custom-vertical-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #ffffff !important;
+  }
+}
