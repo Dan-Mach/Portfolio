@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-
 export default function Hero() {
   const [currentStage, setCurrentStage] = useState(1);
   const remainingLetters = ["i", "m", "a", "r"];
