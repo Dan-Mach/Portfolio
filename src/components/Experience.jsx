@@ -1,7 +1,6 @@
 import { motion } from "motion/react";
 
 export default function Experience() {
-  // Merged skills dataset formatted for the technical profile block
   const skillMatrix = [
     { category: "LANGUAGES", items: "Python, Rust, JavaScript, C" },
     { category: "FRAMEWORKS", items: "Django, React, TensorFlow, PyTorch" },
